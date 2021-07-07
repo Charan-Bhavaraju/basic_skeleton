@@ -1,0 +1,11 @@
+<!-- the entire head metadata footer are not needed they will be stored in the boilerplate 
+    we just have to show the body contents for different routes -->
+<% layout('layouts/boilerplate') %>
+    <h1>Login</h1>
+    <form action="/login" method="POST" class="needs-validation" novalidate>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" required>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <button>Login</button>
+    </form>

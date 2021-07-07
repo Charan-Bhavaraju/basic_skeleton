@@ -1,0 +1,21 @@
+<% layout('layouts/boilerplate') %>
+
+    <h1>Home Page</h1>
+
+    <!-- chatbot demo testing -->
+    <script SameSite="None; Secure" src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"></script>
+    <script>
+        var myLandbot = new Landbot.Popup({
+            configUrl: 'https://chats.landbot.io/v3/H-949714-FSL8C37KZQVEWHEK/index.json',
+        });
+    </script>
+
+    <!-- to display login logout depending on whether the currentUser exists -->
+    <div class="navbar-nav ">
+        <% if(!currentUser) {%>
+            <a href="/login" class="nav-link">Login</a>
+            <a href="/register" class="nav-link">Register</a>
+            <% } else{ %>
+                <a href="/logout" class="nav-link">Logout</a>
+                <% } %>
+    </div>
